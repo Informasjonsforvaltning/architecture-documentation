@@ -21,5 +21,6 @@ We focus on two key levels of abstraction to provide a clear and concise overvie
 ## How to Contribute 
 1. Download the draw.io desktop app (or plugin for VS Code or IntelliJ)
 2. Clone the repository 
-3. Edit or add diagrams as needed, following the C4 model (shapes in draw.io).
+3. Edit or add diagrams as needed, following the C4 model (shapes in draw.io)
 4. Open a pull request with a detailed description of the addition or changes
+5. The pull request will start a workflow that converts all .drawio files in the C4 folder to .svg

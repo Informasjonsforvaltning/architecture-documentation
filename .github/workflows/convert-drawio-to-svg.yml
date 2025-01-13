@@ -1,0 +1,46 @@
+name: Convert .drawio to .svg
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  convert-drawio:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Build Docker image
+        run: docker build -t drawio-converter .
+
+      - name: Run Docker container to convert .drawio to .svg
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/workspace drawio-converter
+
+      - name: Debug workspace files
+        run: ls -R ${{ github.workspace }}
+  
+      - name: Check for changes
+        run: |
+          git add C4/*.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "has_changes=false" >> $GITHUB_ENV
+          else
+            echo "Changes detected."
+            echo "has_changes=true" >> $GITHUB_ENV
+          fi
+  
+      - name: Commit and push changes
+        if: env.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Add exported .svg files"
+          git push origin ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
