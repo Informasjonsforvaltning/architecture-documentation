@@ -26,7 +26,7 @@ jobs:
   
       - name: Check for changes
         run: |
-          git add C4/*.svg
+          git add generated/*.svg
           if git diff --cached --quiet; then
             echo "No changes to commit."
             echo "has_changes=false" >> $GITHUB_ENV

@@ -11,9 +11,11 @@ if [ -z "$drawio_files" ]; then
     exit 0
 fi
 
+mkdir -p /workspace/generated
+
 for drawio_file in $drawio_files; do
     echo "Exporting $drawio_file"
-    drawio --no-sandbox --export --format svg --output /workspace/C4 "$drawio_file"
+    drawio --no-sandbox --export --format svg --output /workspace/generated "$drawio_file"
 done
 
 echo "Export complete"
