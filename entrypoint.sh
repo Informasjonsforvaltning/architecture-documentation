@@ -11,7 +11,7 @@ if [ -z "$drawio_files" ]; then
     exit 0
 fi
 
-mkdir -p generated
+mkdir -p /workspace/generated
 
 for drawio_file in $drawio_files; do
     echo "Exporting $drawio_file"
