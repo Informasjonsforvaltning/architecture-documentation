@@ -1,10 +1,12 @@
 # System Architecture Documentation
 
-The purpose of this repository is to ensure a shared understanding of the system’s structure, functionality, and interactions with its environment. 
+The purpose of this repository is to ensure a shared understanding of the system architecture behind [**data.norge.no**](https://data.norge.no/en) — a national data catalog designed to support the sharing and discovery of public sector data in Norway — as well as adjacent or supporting systems.
 
 And secondly to make collaboration easier, enable version control, and ensure the architecture documentation remains up-to-date.
 
 We use the C4 model to provide a structured approach for describing the system at various levels of abstraction with a consistent set of notations.
+
+👉 **Visit the [wiki](https://github.com/Informasjonsforvaltning/architecture-documentation/wiki/Architecture-documentation) for a more in-depth description of the system architecture.**
 
 ## Key Levels of Documentation
 

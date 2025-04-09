@@ -1,4 +1,5 @@
 ### draw.io ###
 *.bkp
+*.dtmp
 
 .DS_Store
