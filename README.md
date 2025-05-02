@@ -1,6 +1,6 @@
 # System Architecture Documentation
 
-The purpose of this repository is to ensure a shared understanding of the system architecture behind [**data.norge.no**](https://data.norge.no/en) — a national data catalog designed to support the sharing and discovery of public sector data in Norway — as well as adjacent or supporting systems.
+The purpose of this repository is to ensure a shared understanding of the system architecture behind [**data.norge.no**](https://data.norge.no/en) — a national data catalog designed to support the sharing and discovery of public sector data in Norway — as well as supporting systems.
 
 And secondly to make collaboration easier, enable version control, and ensure the architecture documentation remains up-to-date.
 
